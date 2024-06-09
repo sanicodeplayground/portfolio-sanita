@@ -1,14 +1,47 @@
+import Link from 'next/link';
 import Image from 'next/image';
+import { FC } from 'react';
+
+interface LinkBlogProp {
+  slug: string;
+  name: string;
+}
+
+const LinkBlog: FC<LinkBlogProp> = ({ slug, name }) => {
+  return (
+    <a
+      href={`/blog/${slug}`}
+      className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
+    >
+      {name}
+    </a>
+  );
+};
 
 export default function Home() {
   return (
     <section>
-      <h1>hey, I&#8217;m Sanita 👋</h1>
-      <p>
-        I&#8217;m a frontend developer, optimist, and community enthusiast. I
-        currently work as developer at the startup <span>Connou</span>, where I
-        help build an education platform for Universities, using Typescript and
-        Nextj.s
+      <Image
+        src=""
+        alt="Sanita"
+        height={64}
+        width={64}
+        sizes="33vw"
+        priority
+        className="h-16 w-16 rounded-full border
+        border-neutral-200 dark:border-neutral-700"
+      />
+      <h1 className="mb-8 text-2xl font-medium tracking-tighter">
+        hey, I&#8217;m Sanita 👋
+      </h1>
+      <p className="prose prose-neutral dark:prose-invert">
+        {`I'm a frontend developer, optimist, and community enthusiast. I
+        currently`}{' '}
+        <Link href="/work">work</Link>
+        {`as developer at the startup `}
+        <span className="not-prose">Connou</span>
+        {`, where I help build an
+        education platform for Universities, using Typescript and Nextj.s`}
       </p>
       {/* box */}
       <p>
@@ -24,6 +57,12 @@ export default function Home() {
         in at the time, or how I&#8217;m learning and growing in my career,
         sharing knowledge along the way.
       </p>
+      <div className="my-8 flex w-full flex-col space-y-4"></div>
+
+      <LinkBlog
+        name="How to change Tailwind CSS base font size"
+        slug="change-tailwind-base-font-size"
+      />
       {/* article */}
       {/* article */}
       {/* article */}
