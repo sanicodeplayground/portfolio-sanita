@@ -1,0 +1,33 @@
+# How to change Tailwind CSS base font size
+
+If you have been using Tailwind CSS for a while, you probably know that it uses a lot of best practices and recommendations for modern HTML/CSS development. Things like having great reset styles, using CSS custom properties, etc. But there’s one particular feature, that, depending on your workflow, you may want to change, and that’s the base font size.
+
+## Tailwind CSS’ default base font size
+
+The current Tailwind CSS base font size is 16px. Why 16px? Because this is the default font size of most popular browsers like Chrome.
+
+Since a lot of Tailwind defaults use REM values, all these values will be multiplied by the base font size and that will get you the pixel values.
+
+Based on this, if the `text-lg` class is 1.125rem, in pixels, this turns out to be 16 \* 1.125 = 18px. This is exactly what you see in the class preview if you use the official VSCode extension.
+
+![VSCode Extension Example](path/to/vscode-extension-image)
+
+Here's how to change it: via plugin
+
+![Tailwind Plugin Example](path/to/tailwind-plugin-image)
+
+Now all the default REM values in Tailwind will be recalculated, using 18px as a base.
+
+So now the `text-lg` class, will be 18 \* 1.125 = 20.25px.
+
+That’s pretty much it! Now all your REM values will use a base of 18px.
+
+## One extra step if you use the VSCode extension
+
+If you use the official extension for VSCode you may notice that the class preview shows the pixel values still using 16px as a base. To change this you need to add this to your VSCode config:
+
+```json
+{
+  "tailwindCSS.rootFontSize": 10
+}
+```
