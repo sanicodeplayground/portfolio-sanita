@@ -35,9 +35,9 @@ html {
   min-width: 360px;
 }
 
+/* Styling for .prose elements */
 .prose .anchor {
   @apply absolute invisible no-underline;
-
   margin-left: -1em;
   padding-right: 0.5em;
   width: 80%;
@@ -101,10 +101,10 @@ h4 {
   margin-bottom: 1.25em !important;
 }
 
+/* Remove scrollbar in pre elements */
 pre::-webkit-scrollbar {
   display: none;
 }
-
 pre {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */

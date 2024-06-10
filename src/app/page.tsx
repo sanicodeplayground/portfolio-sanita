@@ -2,11 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FC } from 'react';
 
+// Blog
 interface LinkBlogProp {
   slug: string;
   name: string;
 }
-
 const LinkBlog: FC<LinkBlogProp> = ({ slug, name }) => {
   return (
     <a
@@ -17,18 +17,37 @@ const LinkBlog: FC<LinkBlogProp> = ({ slug, name }) => {
     </a>
   );
 };
-
+const techLogos = [
+  {
+    name: 'typescript',
+    image: 'typescript-logo.svg',
+    link: 'https://www.typescriptlang.org/',
+  },
+  {
+    link: 'https://nextjs.org/',
+    name: 'next',
+    image: 'next-logo.svg',
+  },
+  {
+    name: 'react',
+    image: 'react-logo.svg',
+  },
+  {
+    name: 'tailwind',
+    image: 'tailwind-logo.svg',
+  },
+];
 export default function Home() {
   return (
     <section>
       <Image
-        src=""
+        src="/images/avatar.jpg"
         alt="Sanita"
         height={64}
         width={64}
         sizes="33vw"
         priority
-        className="h-16 w-16 rounded-full border
+        className="mb-8 h-16 w-16 rounded-full border
         border-neutral-200 dark:border-neutral-700"
       />
       <h1 className="mb-8 text-2xl font-medium tracking-tighter">
@@ -57,15 +76,20 @@ export default function Home() {
         in at the time, or how I&#8217;m learning and growing in my career,
         sharing knowledge along the way.
       </p>
-      <div className="my-8 flex w-full flex-col space-y-4"></div>
-
-      <LinkBlog
-        name="How to change Tailwind CSS base font size"
-        slug="change-tailwind-base-font-size"
-      />
-      {/* article */}
-      {/* article */}
-      {/* article */}
+      <div className="my-8 flex w-full flex-col space-y-4">
+        <LinkBlog
+          name="How to change Tailwind CSS base font size"
+          slug="change-tailwind-base-font-size"
+        />
+        <LinkBlog
+          name="How to change Tailwind CSS base font size"
+          slug="change-tailwind-base-font-size"
+        />
+        <LinkBlog
+          name="How to change Tailwind CSS base font size"
+          slug="change-tailwind-base-font-size"
+        />
+      </div>
       <p>
         While using the latest framework, I still spend time learning and
         practising the fundamentals of Javascript and CSS, I have a dedicated
@@ -74,6 +98,25 @@ export default function Home() {
       {/* Lab card */}
       {/* Lab card */}
       <p>My focus is on the following technologies:</p>
+      <div className="my-8 flex w-full flex-row space-x-2 overflow-auto">
+        {techLogos.map((item) => (
+          <div
+            key={item.name}
+            className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-1 dark:border-neutral-700 dark:bg-neutral-800"
+          >
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <Image
+                src={`/images/${item.image}`}
+                alt="Sanita"
+                height={64}
+                width={164}
+                sizes="33vw"
+              />
+            </a>
+          </div>
+        ))}
+      </div>
+
       {/* tech tag */}
       {/* tech tag */}
       {/* tech tag */}
