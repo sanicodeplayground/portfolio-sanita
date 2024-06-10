@@ -31,7 +31,7 @@ const page = () => {
             prioritising and nominate the assignee.
           </li>
           <li>Implement and execute testing: unit tests using Jest.</li>
-          <li> Increase website’s accessibility from 70% to 98%</li>
+          <li> Increase website&apos;s accessibility from 70% to 98%</li>
           <li>Conduct code refactoring for cleaner and maintainable code.</li>
           <li>
             Implement responsive design and cross-browser compatibility to
