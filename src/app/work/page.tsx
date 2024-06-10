@@ -1,4 +1,5 @@
 import React from 'react';
+import Badge from '@/components/badge';
 
 const page = () => {
   return (
@@ -9,12 +10,15 @@ const page = () => {
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">Connou</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Frontend developer, Jan 2022 — present
+          Frontend developer, September 2022 — present
         </p>
         <p>
-          I joined Vercel early to grow Next.js and our developer community. I
-          built our Developer Relations team to teach our community about our
-          products.
+          I joined{' '}
+          <span className="not-prose">
+            <Badge href="https://www.connou.app">Connou</Badge>
+          </span>{' '}
+          early to grow Next.js and our developer community. I built our
+          Developer Relations team to teach our community about our products.
         </p>
         <ul>
           <li>
@@ -38,13 +42,23 @@ const page = () => {
             ensure optimal user experience on all devices.
           </li>
         </ul>
+        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
-          Intermediate Conveyancer My Home Move Ltd Conveyancing Paralegal
-          Gorvins Residential LLP
+          My Home Move Ltd & Gorvins Residential LLP
         </h2>
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">
-          Conveyancing Paralega
-        </h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+          Conveyancer, 2021 - 2022
+        </p>
+        <p className="prose prose-neutral dark:prose-invert">
+          My professional life has been heavily focused on customer service. It
+          has always been very important to me to provide the best to my
+          clients. I place myself into my clients&apos; shoes to know what to I
+          exprect from services in order to provide excellent user experience.
+          HAving work in a legal area has given me an excellent oportunity to
+          learn to communicate with variety of stakeholders in diferent levels.
+          This experience has allowed me to practice express complicated
+          terminolugy in accessible yet not patronising maner.
+        </p>
       </div>
     </section>
   );

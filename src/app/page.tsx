@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FC, AnchorHTMLAttributes } from 'react';
+import ArrowIcon from '@/components/arrow-icon';
+import Badge from '@/components/badge';
 
 // Blog
 interface LinkBlogProp {
@@ -38,18 +40,6 @@ const techLogos = [
   },
 ];
 
-// Badge
-interface BadgeProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
-
-const Badge: FC<BadgeProps> = (props) => {
-  return (
-    <a
-      {...props}
-      target="_blank"
-      className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
-    ></a>
-  );
-};
 export default function Home() {
   return (
     <section>
@@ -68,7 +58,7 @@ export default function Home() {
       </h1>
       <p className="prose prose-neutral dark:prose-invert">
         {`I'm a frontend developer, optimist, and community enthusiast. I
-        currently `}
+        currently`}
         <Link href="/work"> work</Link>
         {` as developer at the startup `}
         <span className="not-prose">
@@ -82,17 +72,18 @@ export default function Home() {
         <p>
           I help building reusable components and refactoring for cleaner and
           maintainable code. Currently, I&apos;m migrating styled components to
-          TailwindCSS, one component at a time. I work independently and
-          I&apos;m happy to collaborate with designers and other developers.
+          TailwindCSS, one component at a time. I work independently but I am
+          always happy to collaborate with designers and other developers.
         </p>
       </div>
       {/* box */}
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          I recently started writing content on my blog as a way to become
-          better a communicator. You will find articles about technologies
-          I&apos;m interested in at the time, or how I&apos;m learning and
-          growing in my career, sharing knowledge along the way.
+          I recently started writing content on my blog as a way to become a
+          better communicator. On my blog, you will find articles about the
+          technologies I&apos;m interested in at the time, or how I&apos;m
+          learning and growing in my career. I am to share knowledge and
+          experience that can benefit others along the way.
         </p>
       </div>
       <div className="my-8 flex w-full flex-col space-y-4">
@@ -111,9 +102,10 @@ export default function Home() {
       </div>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          While using the latest framework, I still spend time learning and
+          While using the latest framework, I also allocate time to learning and
           practising the fundamentals of Javascript and CSS, I have a dedicated
-          lab section for it.
+          lab section for this purpose, ensuring I stay grounded in the core
+          principles of web development.
         </p>
       </div>
       {/* Lab card */}
@@ -143,15 +135,39 @@ export default function Home() {
       {/* tech tag */}
       {/* tech tag */}
       {/* tech tag */}
-      <ul>
+      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
-          <a href="">LikendIn</a>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/sgailu/"
+          >
+            <p className="ml-2 h-7">LikendIn</p>
+            <ArrowIcon />
+          </a>
         </li>
         <li>
-          <a href="">GitHub</a>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://github.com/sanicodeplayground"
+          >
+            <p className="ml-2 h-7">GitHub</p>
+            <ArrowIcon />
+          </a>
         </li>
         <li>
-          <a href="">Twitter</a>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://x.com/sanicoding"
+          >
+            <p className="ml-2 h-7">Twitter</p>
+            <ArrowIcon />
+          </a>
         </li>
       </ul>
     </section>
