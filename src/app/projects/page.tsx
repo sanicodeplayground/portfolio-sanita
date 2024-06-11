@@ -7,7 +7,7 @@ const page = () => {
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tight">my projects</h1>
       <div className="prose prose-neutral dark:prose-invert">
-        <p>Some of my most recent projects</p>
+        <p>A collection of my most recent projects.</p>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
       </div>
       <div className="group grid grid-cols-2 grid-rows-2 gap-4">
