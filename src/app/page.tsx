@@ -3,22 +3,8 @@ import Image from 'next/image';
 import { FC, AnchorHTMLAttributes } from 'react';
 import ArrowIcon from '@/components/arrow-icon';
 import Badge from '@/components/badge';
+import { getAllBlogPosts, LinkBlog } from '../components/blog-posts';
 
-// Blog
-interface LinkBlogProp {
-  slug: string;
-  name: string;
-}
-const LinkBlog: FC<LinkBlogProp> = ({ slug, name }) => {
-  return (
-    <Link
-      href={`/blog/${slug}`}
-      className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
-    >
-      {name}
-    </Link>
-  );
-};
 const techLogos = [
   {
     name: 'typescript',
@@ -41,6 +27,8 @@ const techLogos = [
 ];
 
 export default function Page() {
+  const posts = getAllBlogPosts();
+
   return (
     <section>
       <Image
@@ -50,7 +38,7 @@ export default function Page() {
         width={64}
         sizes="33vw"
         priority
-        className="mb-8 h-16 w-16 rounded-full border
+        className="mb-8 h-24 w-24 rounded-full border
         border-neutral-200 dark:border-neutral-700"
       />
       <h1 className="mb-8 text-2xl font-medium tracking-tighter">
@@ -60,19 +48,19 @@ export default function Page() {
         {`I'm a frontend developer, optimist, and community enthusiast. I
         currently`}
         <Link href="/work"> work</Link>
-        {` as developer at the startup `}
+        {` as a developer at the startup `}
         <span className="not-prose">
           <Badge href="https://www.connou.app">Connou</Badge>
         </span>
-        , where I help build an education platform for Universities, using
+        , where I help build an education platform for Universities using
         Typescript and Next.js.
       </p>
       {/* box */}
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          I help building reusable components and refactoring for cleaner and
+          I help build reusable components and refactor for cleaner and more
           maintainable code. Currently, I&apos;m migrating styled components to
-          TailwindCSS, one component at a time. I work independently but I am
+          TailwindCSS, one component at a time. I work independently, but I am
           always happy to collaborate with designers and other developers.
         </p>
       </div>
@@ -81,30 +69,21 @@ export default function Page() {
         <p>
           I recently started writing content on my blog as a way to become a
           better communicator. On my blog, you will find articles about the
-          technologies I&apos;m interested in at the time, or how I&apos;m
-          learning and growing in my career. I am to share knowledge and
-          experience that can benefit others along the way.
+          technologies I&apos;m in at the time or about how I&apos;m learning
+          and growing in my career. I aim to share knowledge and experiences
+          that can benefit others along the way.
         </p>
       </div>
       <div className="my-8 flex w-full flex-col space-y-4">
-        <LinkBlog
-          name="How to change Tailwind CSS base font size"
-          slug="change-tailwind-base-font-size"
-        />
-        <LinkBlog
-          name="How to change Tailwind CSS base font size"
-          slug="change-tailwind-base-font-size"
-        />
-        <LinkBlog
-          name="How to change Tailwind CSS base font size"
-          slug="change-tailwind-base-font-size"
-        />
+        {posts.slice(0, 3).map((post) => (
+          <LinkBlog key={post.slug} {...post} />
+        ))}
       </div>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
           While using the latest framework, I also allocate time to learning and
-          practising the fundamentals of Javascript and CSS, I have a dedicated
-          lab section for this purpose, ensuring I stay grounded in the core
+          practicing the fundamentals of JavaScript and CSS. I have a dedicated
+          lab section for this purpose, ensuring that I keep learning the core
           principles of web development.
         </p>
       </div>
