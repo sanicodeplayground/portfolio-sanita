@@ -1,7 +1,7 @@
 import React from 'react';
 import Badge from '@/components/badge';
 
-const page = () => {
+export default function WorkPage() {
   return (
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tight">my work</h1>
@@ -74,6 +74,4 @@ const page = () => {
       </div>
     </section>
   );
-};
-
-export default page;
+}

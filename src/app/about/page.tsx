@@ -1,4 +1,4 @@
-const Page = () => {
+export default function AboutPage() {
   return (
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tight">about me</h1>
@@ -47,6 +47,4 @@ const Page = () => {
       </div>
     </section>
   );
-};
-
-export default Page;
+}
