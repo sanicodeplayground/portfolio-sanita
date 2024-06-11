@@ -16,6 +16,7 @@ export default function LabPage() {
             id={project.id}
             title={project.title}
             image={project.image}
+            githubURL={project.githubURL}
           />
         ))}
       </div>

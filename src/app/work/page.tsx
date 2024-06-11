@@ -58,19 +58,6 @@ export default function WorkPage() {
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
           Conveyancer, 2021 - 2022
         </p>
-
-        <p>
-          My professional life has been heavily focused on customer service. It
-          has always been very important to me to provide the best to my
-          clients. I place myself into my clients&apos; shoes to know what to I
-          exprect from services in order to provide excellent user experience.
-        </p>
-        <p>
-          Having work in a legal area has given me an excellent oportunity to
-          learn to communicate with variety of stakeholders in diferent levels.
-          This experience has allowed me to practice express complicated
-          terminolugy in accessible yet not patronising maner.
-        </p>
       </div>
     </section>
   );
