@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 const navItems = {
   '/': { name: 'home' },
-  '/work': { name: 'work' },
   '/projects': { name: 'projects' },
-  '/blog': { name: 'blog' },
-  '/lab': { name: 'lab' },
+  '/work': { name: 'work' },
   '/about': { name: 'about' },
+  '/lab': { name: 'lab' },
+  '/blog': { name: 'blog' },
 };
 
 export function Navbar() {
