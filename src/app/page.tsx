@@ -17,12 +17,19 @@ const techLogos = [
     image: 'next-logo.svg',
   },
   {
-    name: 'react',
-    image: 'react-logo.svg',
+    link: 'https://nextjs.org/',
+    name: 'next',
+    image: 'next-logo.svg',
   },
   {
-    name: 'tailwind',
-    image: 'tailwind-logo.svg',
+    link: 'https://nextjs.org/',
+    name: 'next',
+    image: 'next-logo.svg',
+  },
+  {
+    link: 'https://nextjs.org/',
+    name: 'next',
+    image: 'next-logo.svg',
   },
 ];
 
@@ -46,8 +53,8 @@ export default function Page() {
       </h1>
       <p className="prose prose-neutral dark:prose-invert">
         {`I'm a frontend developer, optimist, and community enthusiast. I
-        currently`}
-        <Link href="/work"> work</Link>
+        currently `}
+        <Link href="/work">work</Link>
         {` as a developer at the startup `}
         <span className="not-prose">
           <Badge href="https://www.connou.app">Connou</Badge>
@@ -92,7 +99,7 @@ export default function Page() {
       <div className="prose prose-neutral dark:prose-invert">
         <p>My focus is on the following technologies:</p>
       </div>
-      <div className="my-8 flex w-full flex-row space-x-2 overflow-auto">
+      <div className="my-8 flex h-14 w-full flex-row space-x-2 overflow-x-auto">
         {techLogos.map((item) => (
           <div
             key={item.name}
@@ -110,10 +117,6 @@ export default function Page() {
           </div>
         ))}
       </div>
-
-      {/* tech tag */}
-      {/* tech tag */}
-      {/* tech tag */}
       <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
