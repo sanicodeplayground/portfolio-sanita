@@ -17,8 +17,8 @@ export function Card({ id, title, image }: CardProps) {
         <Image
           src={`/images/projects/${image}`}
           alt={title}
-          width={464}
-          height={264}
+          width={864}
+          height={464}
           sizes="33vw"
           priority
         />
