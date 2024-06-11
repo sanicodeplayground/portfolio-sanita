@@ -7,7 +7,6 @@ import matter from 'gray-matter';
 interface BlogPost {
   slug: string;
   title: string;
-  summary: string;
 }
 
 // Function to render blog posts (title, summary, and slug)
@@ -24,21 +23,19 @@ export function getAllBlogPosts(): BlogPost[] {
     return {
       slug: filename.replace('.mdx', ''),
       title: data.title,
-      summary: data.summary,
     };
   });
   return blogPosts;
 }
 
 // Blog posts component
-export const LinkBlog: FC<BlogPost> = ({ slug, title, summary }) => {
+export const LinkBlog: FC<BlogPost> = ({ slug, title }) => {
   return (
     <Link
       href={`/blog/${slug}`}
       className="w-full rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
     >
-      <h3 className="font-medium text-lg mb-2 tracking-tight">{title}</h3>
-      <p>{summary}</p>
+      <h3 className="font-medium text-lg tracking-tight">{title}</h3>
     </Link>
   );
 };
