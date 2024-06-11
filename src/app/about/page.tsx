@@ -3,20 +3,16 @@ const Page = () => {
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tight">about me</h1>
       <div className="prose prose-neutral dark:prose-invert">
-        <p>On a mission to build products developers</p>
+        <p>Passionate Coder, Creative Problem Solver, and Team Player.</p>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
         <h2 className="font-medium text-xl mb-1">As a developer</h2>
         <p>
-          I pay close attention to my code&apos;s readability. Sure, I&apos;ll
-          put together something as quickly as possible to make it work, but
-          after that I&apos;ll spend a good amount of time commenting and
-          organizing everything. Mi casa es tu casa, I want you to feel welcome
-          around my code. Clean, consistent, readable and maintainable code.
-          It&apos;s great when features work, but it&apos;s even greater
-          whenever they can stay that way, regardless of who&apos;s working on
-          them. I&apos;m excited to work on new projects, because I learn
-          something new every time. I&apos;m always excited for the next
-          challenge!
+          I pay close attention to my code&apos;s readability. I aim for clean,
+          consistent, readable and maintainable code. It&apos;s great when
+          features work, but it&apos;s even greater whenever they can stay that
+          way, regardless of who&apos;s working on them. I&apos;m excited to
+          work on new projects, because I learn something new every time.
+          I&apos;m always excited for the next challenge!
         </p>
         <h2 className="font-medium text-xl mb-1">As a person</h2>
         <p>
@@ -45,8 +41,9 @@ const Page = () => {
         <p>
           I am always happy to pull an espresso shot and make some latte art for
           a colleague. I love to cook, so be on the lookout for the next
-          potluck. Let&apos;s have a chat! I&apos;d love to hear from you.
+          potluck.
         </p>
+        <p>Let&apos;s have a chat! I&apos;d love to hear from you.</p>
       </div>
     </section>
   );
