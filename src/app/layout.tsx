@@ -5,9 +5,31 @@ import { GeistMono } from 'geist/font/mono';
 import { Navbar } from '../components/nav';
 
 export const metadata: Metadata = {
-  title: 'Sanita Gailuma - Frontend Developer - Portfolio 2024',
-  description:
-    'Explore the portfolio of Sanita. Discover projects showcasing expertise in front-end development, including responsive designs, user-centric interfaces, and modern web teclassName={inter.className}chnologies.',
+  metadataBase: new URL('https://sanicodeplayground.com'),
+  title: {
+    default: 'Sanita Gailuma - Frontend Developer - Portfolio 2024',
+    template: '%s | Sanita Gailuma',
+  },
+  description: 'Frontend Developer',
+  openGraph: {
+    title: 'Sanita Gailuma',
+    description: 'Frontend Developer',
+    url: 'https://sanicodeplayground.com',
+    siteName: 'Sanita Gailuma',
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 const cx = (...classes: string[]) => classes.filter(Boolean).join(' ');
