@@ -53,10 +53,24 @@ export default function WorkPage() {
         </ul>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
-          My Home Move Ltd & Gorvins Residential LLP
+          Transitioning to development
         </h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Conveyancer, 2021 - 2022
+          Frontend Development (JavaScript) Bootcamp, January 2022
+        </p>
+        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          My Home Move Ltd
+        </h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+          Intermediate Conveyancer, 2022 - 2022
+        </p>
+        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          Gorvins Residential LLP
+        </h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+          Conveyancing Paralegal, 2021 - 2022
         </p>
       </div>
     </section>
