@@ -1,5 +1,5 @@
-import { Card } from '@/components/Card';
 import projects from '@/db/projects';
+import { Card } from '@/components/Card';
 
 export default function ProjectsPage() {
   return (
