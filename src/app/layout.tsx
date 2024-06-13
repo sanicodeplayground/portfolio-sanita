@@ -50,7 +50,7 @@ export default function RootLayout({
     >
       {/* <body className="antialiased flex flex-col mb-40 max-w-2xl md:flex-row mx-4 mt-8 lg:mx-auto"> */}
       <body className="absolute top-0 -z-10 h-full w-full">
-        <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.4)] opacity-50 blur-[80px]"></div>
+        <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.4)] opacity-50 blur-[80px] -z-50"></div>
         <div className="antialiased flex flex-col mb-40 max-w-2xl md:flex-row mx-4 mt-8 lg:mx-auto">
           <main className="flex flex-col flex-auto min-w-0 mt-6 px-2 md:px-0">
             <Navbar />
