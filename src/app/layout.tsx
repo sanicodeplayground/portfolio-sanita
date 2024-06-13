@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
-import { Navbar } from '../components/Nav';
+import { Navbar } from '../components/Navbar';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sanicodeplayground.com'),
