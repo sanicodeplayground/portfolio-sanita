@@ -7,7 +7,7 @@ import { Navbar } from '../components/Nav';
 export const metadata: Metadata = {
   metadataBase: new URL('https://sanicodeplayground.com'),
   title: {
-    default: 'Sanita Gailuma - Frontend Developer - Portfolio 2024',
+    default: 'Sanita Gailuma, Frontend Developer based in Bristol, UK.',
     template: '%s | Sanita Gailuma',
   },
   description: 'Frontend Developer',
