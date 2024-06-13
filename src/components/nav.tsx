@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import SunIcon from './sun-icon';
-import MoonIcon from './moon-icon';
+// import SunIcon from './sun-icon';
+// import MoonIcon from './moon-icon';
 
 const navItems = {
   '/': { name: 'home' },
@@ -22,7 +22,7 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
-                  className="flex align-middle relative py-1 px-2 transition-all ease-in-out delay-150 hover:text-neutral-800 dark:hover:text-neutral-400"
+                  className="flex align-middle relative py-1 px-2  hover:text-neutral-800 dark:hover:text-neutral-400  after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 dark:after:bg-neutral-400 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
                 >
                   {name}
                 </Link>

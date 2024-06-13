@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { getAllBlogPosts, LinkBlog } from '../../components/blog-posts';
+import { getAllBlogPosts, LinkBlog } from '../../components/BlogPosts';
 
 export const metadata = {
   title: 'Blog',

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import ArrowIcon from '@/components/arrow-icon';
+import ArrowIcon from '@/components/ArrowIcon';
 interface CardProps {
   id: string;
   title: string;

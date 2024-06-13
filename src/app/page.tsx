@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FC, AnchorHTMLAttributes } from 'react';
-import ArrowIcon from '@/components/arrow-icon';
-import Badge from '@/components/badge';
-import { getAllBlogPosts, LinkBlog } from '../components/blog-posts';
+import ArrowIcon from '@/components/ArrowIcon';
+import BadgeConnou from '@/components/BadgeConnou';
+import { getAllBlogPosts, LinkBlog } from '../components/BlogPosts';
 
 const techLogos = [
   {
@@ -51,7 +51,7 @@ export default function Page() {
         <Link href="/work">work</Link>
         {` as a developer at the startup `}
         <span className="not-prose">
-          <Badge href="https://www.connou.app">Connou</Badge>
+          <BadgeConnou href="https://www.connou.app">Connou</BadgeConnou>
         </span>
         , where I help build an education platform for Universities using
         Typescript and Next.js.
@@ -100,7 +100,7 @@ export default function Page() {
           </div>
         ))}
       </div>
-      <ul className="font-sm mt-8 -ml-3 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
@@ -108,21 +108,21 @@ export default function Page() {
             target="_blank"
             href="https://www.linkedin.com/in/sgailu/"
           >
-            <p className="ml-2 h-7 pr-2">LikendIn</p>
-            <div className="transform text-neutral-700 transition-transform duration-300 hover:-rotate-12 dark:text-neutral-300">
+            LikendIn
+            <div className="transform transition-transform duration-300 hover:-rotate-12 pl-2">
               <ArrowIcon />
             </div>
           </a>
         </li>
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            className="flex items-center hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/sanicodeplayground"
           >
-            <p className="ml-2 h-7 pr-2">GitHub</p>
-            <div className="transform text-neutral-700 transition-transform duration-300 hover:-rotate-12 dark:text-neutral-300">
+            GitHub
+            <div className="transform transition-transform duration-300 hover:-rotate-12 pl-2">
               <ArrowIcon />
             </div>
           </a>
