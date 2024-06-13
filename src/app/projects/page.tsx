@@ -1,5 +1,5 @@
 import projects from '@/db/projects';
-import { Card } from '@/components/Card';
+import { CardComponent } from '@/components/CardComponent';
 
 export default function ProjectsPage() {
   return (
@@ -11,7 +11,7 @@ export default function ProjectsPage() {
       </div>
       <div className="group grid sm:grid-cols-2 grid-rows-2 gap-4">
         {projects.map((project) => (
-          <Card
+          <CardComponent
             key={project.id}
             id={project.id}
             title={project.title}
