@@ -1,4 +1,4 @@
-import { Card } from '@/components/card';
+import { Card } from '@/components/Card';
 import labProjects from '@/db/lab-projects';
 
 export default function LabPage() {

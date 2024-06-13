@@ -1,5 +1,5 @@
 import React from 'react';
-import Badge from '@/components/badge';
+import BadgeConnou from '@/components/BadgeConnou';
 
 export default function WorkPage() {
   return (
@@ -15,7 +15,7 @@ export default function WorkPage() {
         <p>
           I joined{' '}
           <span className="not-prose">
-            <Badge href="https://www.connou.app">Connou</Badge>
+            <BadgeConnou href="https://www.connou.app">Connou</BadgeConnou>
           </span>{' '}
           with the aim to practice what I have learned in my coding bootcamp. I
           wanted to work with TypeScript and Next.js to build powerfull
