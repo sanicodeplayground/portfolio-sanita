@@ -87,16 +87,16 @@ export default function Page() {
         {techLogos.map((item) => (
           <div
             key={item.name}
-            className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-1 dark:border-neutral-700 dark:bg-neutral-800"
+            className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800 px-2"
           >
             <Image
               src={`/images/svgs/${item.image}`}
               alt="Sanita"
-              height={34}
-              width={34}
+              height={24}
+              width={24}
               className="mr-2"
             />
-            <span className="font-medium">{item.name}</span>
+            <p className="font-medium">{item.name}</p>
           </div>
         ))}
       </div>
