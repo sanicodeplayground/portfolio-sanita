@@ -8,7 +8,7 @@ interface CardProps {
   githubURL: string;
 }
 
-export function Card({ id, title, image, githubURL }: CardProps) {
+export function CardComponent({ id, title, image, githubURL }: CardProps) {
   return (
     <div
       key={id}
