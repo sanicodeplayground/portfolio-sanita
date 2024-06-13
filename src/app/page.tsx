@@ -7,24 +7,19 @@ import { getAllBlogPosts, LinkBlog } from '../components/blog-posts';
 
 const techLogos = [
   {
-    name: 'typescript',
-    image: 'typescript-logo.svg',
+    name: 'JavaScript',
+    image: 'tech-js.svg',
     link: 'https://www.typescriptlang.org/',
   },
   {
+    name: 'React',
+    image: 'tech-react.svg',
     link: 'https://nextjs.org/',
-    name: 'next',
-    image: 'next-logo.svg',
   },
   {
+    name: 'Next.js',
+    image: 'tech-next.svg',
     link: 'https://nextjs.org/',
-    name: 'next',
-    image: 'react-logo.svg',
-  },
-  {
-    link: 'https://nextjs.org/',
-    name: 'next',
-    image: 'tailwind-logo.svg',
   },
 ];
 
@@ -43,9 +38,13 @@ export default function Page() {
         className="mb-8 h-24 w-24 rounded-full border
         border-neutral-200 dark:border-neutral-700"
       />
-      <h1 className="mb-8 text-2xl font-medium tracking-tighter">
-        hey, I&apos;m Sanita 👋
+      <h1 className="mb-2 text-2xl font-medium tracking-tighter">
+        I&apos;m Sanita 👋
       </h1>
+      <div className="prose prose-neutral dark:prose-invert">
+        <p className="font-medium tracking-wide">Frontend Developer</p>
+      </div>
+
       <p className="prose prose-neutral dark:prose-invert">
         {`I'm a frontend developer, optimist, and community enthusiast. I
         currently `}
@@ -57,7 +56,6 @@ export default function Page() {
         , where I help build an education platform for Universities using
         Typescript and Next.js.
       </p>
-      {/* box */}
       <div className="prose prose-neutral dark:prose-invert">
         <p>
           I help build reusable components and refactor for cleaner and more
@@ -66,16 +64,10 @@ export default function Page() {
           always happy to collaborate with designers and other developers.
         </p>
       </div>
-      {/* box */}
-      <div className="prose prose-neutral dark:prose-invert">
-        <p>
-          I recently started writing content on my blog as a way to become a
-          better communicator. On my blog, you will find articles about the
-          technologies I&apos;m in at the time or about how I&apos;m learning
-          and growing in my career. I aim to share knowledge and experiences
-          that can benefit others along the way.
-        </p>
-      </div>
+      <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+      <h2 className="font-medium text-xl mb-1 tracking-tighter">
+        Latest posts
+      </h2>
       <div className="my-8 flex w-full flex-col space-y-4">
         {posts.slice(0, 3).map((post) => (
           <LinkBlog key={post.slug} {...post} />
@@ -89,26 +81,22 @@ export default function Page() {
           principles of web development.
         </p>
       </div>
-      {/* Lab card */}
-      {/* Lab card */}
-      <div className="prose prose-neutral dark:prose-invert">
-        <p>My focus is on the following technologies:</p>
-      </div>
+      <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+      <h2 className="font-medium text-xl mb-1 tracking-tighter">Focus on:</h2>
       <div className="my-8 flex h-14 w-full flex-row space-x-2 overflow-x-auto">
         {techLogos.map((item) => (
           <div
             key={item.name}
             className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-1 dark:border-neutral-700 dark:bg-neutral-800"
           >
-            <a href={item.link} target="_blank" rel="noopener noreferrer">
-              <Image
-                src={`/images/${item.image}`}
-                alt="Sanita"
-                height={64}
-                width={164}
-                sizes="33vw"
-              />
-            </a>
+            <Image
+              src={`/images/svgs/${item.image}`}
+              alt="Sanita"
+              height={34}
+              width={34}
+              className="mr-2"
+            />
+            <span className="font-medium">{item.name}</span>
           </div>
         ))}
       </div>

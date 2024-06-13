@@ -3,6 +3,7 @@ import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import ArrowIcon from '@/components/arrow-icon';
 
 interface BlogPost {
   slug: string;
@@ -33,9 +34,10 @@ export const LinkBlog: FC<BlogPost> = ({ slug, title }) => {
   return (
     <Link
       href={`/blog/${slug}`}
-      className="w-full rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
+      className="flex items-center justify-between w-full rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
     >
-      <h3 className="font-medium text-lg tracking-tight">{title}</h3>
+      <h3 className="font-medium text-lg tracking-tight">{title} </h3>
+      <ArrowIcon />
     </Link>
   );
 };
