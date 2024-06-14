@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { FC, AnchorHTMLAttributes } from 'react';
 import ArrowIcon from '@/components/ArrowIcon';
 import BadgeConnou from '@/components/BadgeConnou';
-import { getAllBlogPosts, LinkBlog } from '../components/BlogPosts';
+import LinkBlog from '../components/BlogPosts';
+import { FC } from 'react';
+import fs from 'fs';
+import path from 'path';
 
 const techLogos = [
   {
@@ -23,8 +25,21 @@ const techLogos = [
   },
 ];
 
-export default function Page() {
-  const posts = getAllBlogPosts();
+type BlogPost = {
+  slug: string;
+  title: string;
+};
+
+async function getBlogPosts(): Promise<BlogPost[]> {
+  const files = fs.readdirSync(path.join(process.cwd(), 'src/content'));
+  return files.map((filename) => ({
+    slug: filename.replace('.tsx', ''),
+    title: filename.replace('.tsx', '').replace(/-/g, ' '),
+  }));
+}
+
+const Page: FC = async () => {
+  const posts = await getBlogPosts();
 
   return (
     <section>
@@ -69,8 +84,8 @@ export default function Page() {
         Latest posts
       </h2>
       <div className="my-8 flex w-full flex-col space-y-4">
-        {posts.slice(0, 3).map((post) => (
-          <LinkBlog key={post.slug} {...post} />
+        {posts.map((post) => (
+          <LinkBlog key={post.slug} title={post.title} slug={post.slug} />
         ))}
       </div>
       <div className="prose prose-neutral dark:prose-invert">
@@ -130,4 +145,5 @@ export default function Page() {
       </ul>
     </section>
   );
-}
+};
+export default Page;
