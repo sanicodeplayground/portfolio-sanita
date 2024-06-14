@@ -1,14 +1,29 @@
+//This file is the main blog page that lists all the blog posts
+import fs from 'fs';
+import path from 'path';
+import LinkBlog from '../../components/BlogPosts';
 import { FC } from 'react';
-import { getAllBlogPosts, LinkBlog } from '../../components/BlogPosts';
 
 export const metadata = {
   title: 'Blog',
   description: 'Read my thoughts on software development, design, and more.',
 };
 
-const BlogPage: FC = () => {
-  // Call the function to fetch blog posts
-  const posts = getAllBlogPosts();
+type BlogPost = {
+  slug: string;
+  title: string;
+};
+
+async function getBlogPosts(): Promise<BlogPost[]> {
+  const files = fs.readdirSync(path.join(process.cwd(), 'src/content'));
+  return files.map((filename) => ({
+    slug: filename.replace('.tsx', ''),
+    title: filename.replace('.tsx', '').replace(/-/g, ' '),
+  }));
+}
+
+const BlogPage: FC = async () => {
+  const posts = await getBlogPosts();
 
   return (
     <section>
@@ -19,7 +34,7 @@ const BlogPage: FC = () => {
       </div>
       <div className="my-8 flex w-full flex-col space-y-4">
         {posts.map((post) => (
-          <LinkBlog key={post.slug} {...post} />
+          <LinkBlog key={post.slug} title={post.title} slug={post.slug} />
         ))}
       </div>
     </section>
