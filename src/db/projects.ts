@@ -5,7 +5,7 @@ const projects = [
     image: 'portfolioAnnie.jpg',
     previewURL:
       'https://medium.com/@magiur99/building-a-react-app-281f4e9d342e',
-    githubURL: 'https://github.com/sanicodeplayground/annie-website',
+    githubURL: 'https://anniebookerillustration.com',
     techStack: [
       'React',
       'Props',

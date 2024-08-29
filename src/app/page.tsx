@@ -2,10 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ArrowIcon from '@/components/ArrowIcon';
 import BadgeConnou from '@/components/BadgeConnou';
-import LinkBlog from '../components/BlogPosts';
 import { FC } from 'react';
 import fs from 'fs';
 import path from 'path';
+import projects from '@/db/projects';
+import { CardComponent } from '@/components/CardComponent';
 
 const techLogos = [
   {
@@ -53,47 +54,30 @@ const Page: FC = async () => {
         className="mb-8 h-24 w-24 rounded-full border
         border-neutral-200 dark:border-neutral-700"
       />
-      <h1 className="mb-2 text-2xl font-medium tracking-tighter">
-        I&apos;m Sanita 👋
+      <h1 className="mb-2 text-4xl font-medium tracking-tighter">
+        Hey, I&apos;m Sanita <br />
+        Front-end Developer
       </h1>
-      <div className="prose prose-neutral dark:prose-invert">
+      {/* <div className="prose prose-neutral dark:prose-invert">
         <p className="font-medium tracking-wide">Frontend Developer</p>
-      </div>
+      </div> */}
 
       <p className="prose prose-neutral dark:prose-invert">
-        {`I'm a frontend developer, optimist, and community enthusiast. I
+        {`A self-taught front-end developer, optimist, and community enthusiast. I
         currently `}
         <Link href="/work">work</Link>
         {` as a developer at the startup `}
         <span className="not-prose">
           <BadgeConnou href="https://www.connou.app">Connou</BadgeConnou>
         </span>
-        , where I help build an education platform for Universities using
-        Typescript and Next.js.
+        , building a social platform for students using Typescript and React.
       </p>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          I help build reusable components and refactor for cleaner and more
+          I build reusable components and refactor for cleaner and more
           maintainable code. Currently, I&apos;m migrating styled components to
-          TailwindCSS, one component at a time. I work independently, but I am
+          TailwindCSS, one component at a time. I work independently, and I am
           always happy to collaborate with designers and other developers.
-        </p>
-      </div>
-      <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-      <h2 className="font-medium text-xl mb-1 tracking-tighter">
-        Latest posts
-      </h2>
-      <div className="my-8 flex w-full flex-col space-y-4">
-        {posts.map((post) => (
-          <LinkBlog key={post.slug} title={post.title} slug={post.slug} />
-        ))}
-      </div>
-      <div className="prose prose-neutral dark:prose-invert">
-        <p>
-          While using the latest framework, I also allocate time to learning and
-          practicing the fundamentals of JavaScript and CSS. I have a dedicated
-          lab section for this purpose, ensuring that I keep learning the core
-          principles of web development.
         </p>
       </div>
       <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
@@ -115,6 +99,21 @@ const Page: FC = async () => {
           </div>
         ))}
       </div>
+      <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+      <h2 className="font-medium text-xl mb-1 tracking-tighter">Portfolio</h2>
+      <div className="my-8 group grid sm:grid-cols-2 grid-rows-2 gap-4">
+        {projects.map((project) => (
+          <CardComponent
+            key={project.id}
+            id={project.id}
+            title={project.title}
+            image={project.image}
+            githubURL={project.githubURL}
+          />
+        ))}
+      </div>
+      <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
+
       <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a

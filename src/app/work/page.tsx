@@ -6,7 +6,9 @@ export default function WorkPage() {
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tight">my work</h1>
       <div className="prose prose-neutral dark:prose-invert">
-        <p>On a mission to build products people love.</p>
+        <p>
+          On a mission to build products people love <span>💕</span>
+        </p>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">Connou</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
@@ -21,33 +23,27 @@ export default function WorkPage() {
           wanted to work with TypeScript and Next.js to build powerfull
           products.
         </p>
-        <ul>
+        <ul className="list-none px-0">
           <li>
-            <strong>Develop and maintain React components</strong>: Collaborate
-            with the product team, utilising TypeScript, Next.js, and Tailwind
-            CSS to optimise performance and functionality.
+            <span>✅</span>
+            <strong> Develop and maintain React components</strong>: by using
+            TypeScript and Next.js to optimise performance and functionality
           </li>
           <li>
-            <strong>Prepare Connou project to be migrated to Tailwind</strong>:
-            migrate the project from Styled Components to TailwindCSS.
+            <span>✅</span>
+            <strong> Reduce build time</strong>: by migrating from Styled
+            Components to TailwindCSS, improving performance and ensuring a
+            consistent design system across the project.
           </li>
           <li>
-            <strong> Help with project management</strong>: keep Notion up to
-            date with task planning, prioritising and nominate the assignee.
+            <span>✅</span>
+            <strong> Implementing unit test using Jest</strong>: improving code
+            reliability and reducing bugs, resulting in a more stable and
+            maintainable application.
           </li>
           <li>
-            <strong>Implement and execute testing</strong>: unit tests using
-            Jest.
-          </li>
-          <li>
-            <strong>Increase website accessibility</strong>: from 70% to 98%.
-          </li>
-          <li>
-            <strong>Conduct code refactoring</strong>: for cleaner and
-            maintainable code.
-          </li>
-          <li>
-            <strong>Implement responsive design</strong> and cross-browser
+            <span>✅</span>
+            <strong> Implement responsive design</strong> and cross-browser
             compatibility to ensure optimal user experience on all devices.
           </li>
         </ul>
