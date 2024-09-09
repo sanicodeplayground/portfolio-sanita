@@ -70,14 +70,14 @@ const Page: FC = async () => {
         <span className="not-prose">
           <BadgeConnou href="https://www.connou.app">Connou</BadgeConnou>
         </span>
-        , building a social platform for students using Typescript and React.
+        , building a social platform for students using Typescript and Next.js.
       </p>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
           I build reusable components and refactor for cleaner and more
-          maintainable code. Currently, I&apos;m migrating styled components to
-          TailwindCSS, one component at a time. I work independently, and I am
-          always happy to collaborate with designers and other developers.
+          maintainable code. Currently, I&apos;m coding the 3rd version of the
+          website. I work independently, and I am always happy to collaborate
+          with designers and other developers.
         </p>
       </div>
       <hr className="my-6 border-neutral-100 dark:border-neutral-800" />

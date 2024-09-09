@@ -19,25 +19,26 @@ export default function WorkPage() {
           <span className="not-prose">
             <BadgeConnou href="https://www.connou.app">Connou</BadgeConnou>
           </span>{' '}
-          with the aim to practice what I have learned in my coding bootcamp. I
-          wanted to work with TypeScript and Next.js to build powerfull
-          products.
+          with the aim to apply and reinforce the skills I have learned through
+          self-study. I wanted to gain hands-on experience in building powerful
+          products with TypeScript and Next.js.
         </p>
+        <p>Things I do at Connou:</p>
         <ul className="list-none px-0">
           <li>
             <span>✅</span>
-            <strong> Develop and maintain React components</strong>: by using
-            TypeScript and Next.js to optimise performance and functionality
+            <strong> Develop and maintain React components</strong> by using
+            TypeScript and Next.js to optimise performance and functionality.
           </li>
           <li>
             <span>✅</span>
-            <strong> Reduce build time</strong>: by migrating from Styled
+            <strong> Reduced build time</strong> by migrating from Styled
             Components to TailwindCSS, improving performance and ensuring a
             consistent design system across the project.
           </li>
           <li>
             <span>✅</span>
-            <strong> Implementing unit test using Jest</strong>: improving code
+            <strong> Implementing unit test using Jest</strong>. Improving code
             reliability and reducing bugs, resulting in a more stable and
             maintainable application.
           </li>
@@ -52,7 +53,8 @@ export default function WorkPage() {
           Transitioning to development
         </h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Frontend Development (JavaScript) Bootcamp, January 2022
+          Frontend Development (JavaScript) Coursera, Udemy courses, January
+          2022
         </p>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
