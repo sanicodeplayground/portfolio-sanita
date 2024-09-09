@@ -1,7 +1,7 @@
 const projects = [
   {
     id: 'annie',
-    title: 'Portfolio (freelance work)',
+    title: 'Portfolio (Next.js)',
     image: 'portfolioAnnie.jpg',
     previewURL:
       'https://medium.com/@magiur99/building-a-react-app-281f4e9d342e',
@@ -15,8 +15,22 @@ const projects = [
     ],
   },
   {
+    id: 'airplane',
+    title: 'Airplane Tracker (React MUI)',
+    image: 'airplaneRadar.png',
+    previewURL: 'https://flight-radar-seven.vercel.app/',
+    githubURL: 'https://flight-radar-seven.vercel.app/',
+    techStack: [
+      'React + Vite',
+      'Vercel',
+      'State management (useState, useEffect)',
+      'Component Composition',
+      'API data fetching',
+    ],
+  },
+  {
     id: 'facts',
-    title: 'Daily Discoveries',
+    title: 'Daily Discoveries (React)',
     image: 'portfolioDailyDiscoveries.png',
     previewURL:
       'https://medium.com/@magiur99/building-a-react-app-281f4e9d342e',
