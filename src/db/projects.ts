@@ -17,7 +17,7 @@ const projects = [
   {
     id: 'airplane',
     title: 'Airplane Tracker (React MUI)',
-    image: 'airplaneRadar.png',
+    image: 'AirplaneRadar.png',
     previewURL: 'https://flight-radar-seven.vercel.app/',
     githubURL: 'https://flight-radar-seven.vercel.app/',
     techStack: [
