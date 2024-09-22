@@ -16,7 +16,7 @@ const projects = [
   },
   {
     id: 'airplane',
-    title: 'Airplane Tracker (React MUI)',
+    title: 'Airplane Tracker (React + Vite, MUI)',
     image: 'AirplaneRadar.png',
     previewURL: 'https://flight-radar-seven.vercel.app/',
     githubURL: 'https://flight-radar-seven.vercel.app/',
@@ -44,6 +44,20 @@ const projects = [
     ],
   },
   {
+    id: 'travel',
+    title: 'Travel Packing List (React + Vite)',
+    image: 'portfolioTravelList.png',
+    previewURL: 'travel-packing-list-one.vercel.app',
+    githubURL: 'https://github.com/sanicodeplayground/travel-packing-list',
+    techStack: [
+      'React + Vite',
+      'Props',
+      'State management (useState)',
+      'React Hooks',
+      'ES6+',
+    ],
+  },
+  {
     id: 'dice-game',
     image: 'portfolioGameDice.jpg',
     title: 'Dice Game',
@@ -67,16 +81,6 @@ const projects = [
     previewURL: 'https://tailwindcss-shop.vercel.app/',
     githubURL: 'https://github.com/sanicodeplayground/tailwindcss',
     techStack: ['Vercel deployment', 'Tailwind v3.4', 'JavaScript'],
-  },
-
-  {
-    id: 'newsletter-validation',
-    image: 'portfolioNewsletterValidation.jpg',
-    title: 'Newsletter Validation',
-    previewURL: 'https://react-newsletter-sign-up-rho.vercel.app/',
-    githubURL:
-      'https://github.com/sanicodeplayground/react-newsletter-sign-up-form',
-    techStack: ['React state hook', 'Form input validation', 'Error handling'],
   },
 ];
 
