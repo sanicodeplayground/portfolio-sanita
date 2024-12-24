@@ -58,9 +58,6 @@ const Page: FC = async () => {
         Hey, I&apos;m Sanita <br />
         Front-end Developer
       </h1>
-      {/* <div className="prose prose-neutral dark:prose-invert">
-        <p className="font-medium tracking-wide">Frontend Developer</p>
-      </div> */}
 
       <p className="prose prose-neutral dark:prose-invert">
         {`A self-taught front-end developer, optimist, and community enthusiast. I

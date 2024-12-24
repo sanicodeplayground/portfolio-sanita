@@ -1,21 +1,19 @@
+'use client';
+
 import Link from 'next/link';
-// import SunIcon from './sun-icon';
-// import MoonIcon from './moon-icon';
+import ThemeToggle from './ThemeToggle';
 
 const navItems = {
   '/': { name: 'Home' },
   '/projects': { name: 'Portfolio' },
   '/work': { name: 'Work' },
-  // '/blog': { name: 'blog' },
-  // '/about': { name: 'about' },
-  // '/lab': { name: 'lab' },
 };
 
 export function Navbar() {
   return (
     <aside className="mb-16 tracking-tight -ml-3">
       <div className="flex items-center justify-between">
-        <nav className="flex flex-row items-start relative px-0 pb-0 md:overflow-auto scroll-pr-6 md:relative">
+        <nav className="flex flex-row relative px-0 pb-0 md:overflow-auto scroll-pr-6 md:relative">
           <div className="flex flex-row space-x-0 pr-10">
             {Object.entries(navItems).map(([path, { name }]) => {
               return (
@@ -30,9 +28,7 @@ export function Navbar() {
             })}
           </div>
         </nav>
-        {/* <button>
-          <SunIcon />
-        </button> */}
+        <ThemeToggle />
       </div>
     </aside>
   );
