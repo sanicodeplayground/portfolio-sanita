@@ -1,0 +1,29 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "pages": {
+    "home": "/",
+    "work": "/work"
+  },
+  "expectedContent": {
+    "home": {
+      "title": "Hey, I'm Sanita",
+      "subtitle": "Front-end Developer",
+      "description": "self-taught front-end developer"
+    },
+    "work": {
+      "title": "my work",
+      "company": "Connou",
+      "role": "Frontend developer, September 2022 — present"
+    }
+  },
+  "externalLinks": {
+    "connou": "https://www.connou.app",
+    "linkedin": "https://www.linkedin.com/in/sgailu/",
+    "github": "https://github.com/sanicodeplayground"
+  },
+  "technologies": [
+    "JavaScript",
+    "React",
+    "Next.js"
+  ]
+} 
