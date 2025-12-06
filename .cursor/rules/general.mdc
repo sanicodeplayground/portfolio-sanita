@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+You must use TypeScript.
+You must follow Next.js best practices.
+You must always go to the official websites.
+Before installing new packages, you must make sure it is the newest version.
+Once you finish your work, add emoji (🎊) in the chat conversation.
