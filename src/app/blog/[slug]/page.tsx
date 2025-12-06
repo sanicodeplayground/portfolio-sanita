@@ -5,9 +5,9 @@ import fs from 'fs';
 import path from 'path';
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 async function getBlogPosts() {
@@ -26,8 +26,9 @@ export async function generateStaticParams() {
 }
 
 export default async function Blog({ params }: Props) {
+  const resolvedParams = await params;
   const posts = await getBlogPosts();
-  const post = posts.find((post) => post.slug === params.slug);
+  const post = posts.find((post) => post.slug === resolvedParams.slug);
 
   if (!post) {
     notFound();
